@@ -8,7 +8,7 @@ ALLOWED_HOSTS = ["*"]
 
 INSTALLED_APPS = [
     "rest_framework",
-    "domain",
+    "domain.apps.DomainConfig",
 ]
 
 MIDDLEWARE = [
@@ -19,6 +19,7 @@ MIDDLEWARE = [
 ROOT_URLCONF = "config.urls"
 WSGI_APPLICATION = "config.wsgi.application"
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+USE_TZ = True
 
 if os.getenv("DB_HOST"):
     DATABASES = {

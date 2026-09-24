@@ -48,7 +48,7 @@ body {
 
 .brand-title {
   margin: 0;
-  font-size: clamp(24px, 3vw, 42px);
+  font-size: clamp(20px, 2.6vw, 34px);
   line-height: 1.06;
   font-weight: 800;
 }
@@ -56,96 +56,110 @@ body {
 .workspace {
   width: min(1180px, calc(100vw - 32px));
   margin: 0 auto;
-  padding: clamp(24px, 5vw, 56px) 0 64px;
+  padding: clamp(18px, 3vw, 32px) 0 64px;
 }
 
-.lead-grid {
+/* ---------- 提交页 ---------- */
+
+.submit-layout {
   display: grid;
-  grid-template-columns: minmax(0, 1.15fr) minmax(280px, 0.85fr);
-  gap: clamp(18px, 3vw, 32px);
-  align-items: stretch;
+  grid-template-columns: minmax(0, 1.1fr) minmax(280px, 0.9fr);
+  gap: 22px;
+  align-items: start;
 }
 
-.hero-panel,
-.work-panel,
-.feature-panel,
-.metric-card {
+.settle-card,
+.rules-panel {
   border: 1px solid color-mix(in srgb, #271d1a 13%, transparent);
   background: color-mix(in srgb, #f8f1ec 86%, white 14%);
   box-shadow: 0 18px 50px color-mix(in srgb, #271d1a 10%, transparent);
-}
-
-.hero-panel {
-  padding: clamp(24px, 4vw, 44px);
   border-radius: 8px;
 }
 
-.hero-panel p {
-  max-width: 780px;
-  color: color-mix(in srgb, #271d1a 72%, #b14f3b 28%);
-  font-size: clamp(16px, 2vw, 19px);
-  line-height: 1.8;
+.rules-panel {
+  padding: 22px 26px;
 }
 
-.metric-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 14px;
+.rules-panel ul {
+  margin: 0;
+  padding-left: 20px;
+  color: color-mix(in srgb, #271d1a 78%, #3d6b72 22%);
+  line-height: 2;
 }
 
-.metric-card {
+.route-hint {
+  margin: -6px 0 18px;
+  padding: 12px 14px;
   border-radius: 8px;
-  padding: 18px;
+  background: color-mix(in srgb, #3d6b72 8%, transparent);
 }
 
-.metric-value {
-  display: block;
-  margin-top: 10px;
-  font-size: clamp(24px, 3vw, 34px);
-  font-weight: 800;
+.tag-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 8px;
 }
 
-.feature-strip {
-  display: grid;
-  grid-template-columns: repeat(5, minmax(180px, 1fr));
-  gap: 14px;
-  margin: 26px 0;
-  overflow-x: auto;
-  padding-bottom: 6px;
-}
+/* ---------- 总览页 ---------- */
 
-.feature-panel {
-  min-width: 180px;
-  border-radius: 8px;
-  padding: 18px;
-}
-
-.feature-panel strong {
-  display: block;
-  margin-bottom: 10px;
-  font-size: 16px;
-}
-
-.feature-panel p {
-  color: color-mix(in srgb, #271d1a 68%, #b14f3b 32%);
-  line-height: 1.65;
-}
-
-.work-panel {
-  margin-top: 26px;
-  border-radius: 8px;
-  padding: 22px;
-}
-
-.pill {
-  display: inline-flex;
+.overview-head {
+  display: flex;
   align-items: center;
-  gap: 8px;
-  border-radius: 999px;
-  padding: 6px 12px;
-  background: color-mix(in srgb, #b14f3b 14%, transparent);
-  color: #271d1a;
-  font-weight: 700;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.overview-alert {
+  margin-bottom: 16px;
+}
+
+.overview-loading {
+  display: flex;
+  justify-content: center;
+  padding: 80px 0;
+}
+
+.route-panel-list {
+  display: grid;
+  gap: 22px;
+}
+
+.route-panel .ant-card-head {
+  align-items: flex-start !important;
+}
+
+.route-panel-title {
+  display: grid;
+  gap: 2px;
+}
+
+.pending-block {
+  margin: 14px 0 18px;
+  padding: 12px 14px;
+  border-radius: 8px;
+  background: color-mix(in srgb, #d48806 10%, transparent);
+}
+
+.sequence-cell {
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.note-ok {
+  color: #389e0d;
+}
+
+.note-incomplete {
+  color: #d46b08;
+}
+
+.issue-tags {
+  display: inline-flex;
+  gap: 4px;
+  margin-left: 8px;
 }
 
 @media (max-width: 860px) {
@@ -154,11 +168,7 @@ body {
     flex-direction: column;
   }
 
-  .lead-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .metric-grid {
+  .submit-layout {
     grid-template-columns: 1fr;
   }
 }

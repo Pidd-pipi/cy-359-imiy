@@ -6,5 +6,6 @@ RUN apt-get update && apt-get install -y --no-install-recommends curl && rm -rf 
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 COPY . .
+RUN chmod +x /app/entrypoint.sh
 EXPOSE 29519
-CMD ["gunicorn", "config.wsgi:application", "--bind", "0.0.0.0:29519"]
+ENTRYPOINT ["/app/entrypoint.sh"]

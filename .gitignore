@@ -7,8 +7,11 @@ dist/
 .vscode/
 frontend/dist/
 backend/__pycache__/
+backend/**/__pycache__/
 backend/.venv/
+backend/db.sqlite3
 backend/**/*.pyc
+*.tsbuildinfo
 coverage/
 .pytest_cache/
 *.class
