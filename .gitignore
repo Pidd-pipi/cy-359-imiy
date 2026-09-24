@@ -1,0 +1,14 @@
+node_modules/
+dist/
+.env
+.DS_Store
+*.log
+.idea/
+.vscode/
+frontend/dist/
+backend/__pycache__/
+backend/.venv/
+backend/**/*.pyc
+coverage/
+.pytest_cache/
+*.class

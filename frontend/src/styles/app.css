@@ -1,0 +1,164 @@
+:root {
+  color: #271d1a;
+  background: #f8f1ec;
+  font-family: "Avenir Next", "Gill Sans", "Segoe UI", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background:
+    linear-gradient(135deg, color-mix(in srgb, #b14f3b 16%, transparent), transparent 34%),
+    radial-gradient(circle at 86% 12%, color-mix(in srgb, #3d6b72 24%, transparent), transparent 28%),
+    #f8f1ec;
+}
+
+.app-shell {
+  min-height: 100vh;
+  background: transparent;
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  height: auto;
+  padding: 22px clamp(20px, 4vw, 56px);
+  background: color-mix(in srgb, #f8f1ec 86%, white 14%);
+  border-bottom: 1px solid color-mix(in srgb, #271d1a 12%, transparent);
+}
+
+.brand-block {
+  display: grid;
+  gap: 4px;
+}
+
+.brand-code {
+  font-size: 12px;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  color: color-mix(in srgb, #271d1a 58%, #b14f3b 42%);
+}
+
+.brand-title {
+  margin: 0;
+  font-size: clamp(24px, 3vw, 42px);
+  line-height: 1.06;
+  font-weight: 800;
+}
+
+.workspace {
+  width: min(1180px, calc(100vw - 32px));
+  margin: 0 auto;
+  padding: clamp(24px, 5vw, 56px) 0 64px;
+}
+
+.lead-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(280px, 0.85fr);
+  gap: clamp(18px, 3vw, 32px);
+  align-items: stretch;
+}
+
+.hero-panel,
+.work-panel,
+.feature-panel,
+.metric-card {
+  border: 1px solid color-mix(in srgb, #271d1a 13%, transparent);
+  background: color-mix(in srgb, #f8f1ec 86%, white 14%);
+  box-shadow: 0 18px 50px color-mix(in srgb, #271d1a 10%, transparent);
+}
+
+.hero-panel {
+  padding: clamp(24px, 4vw, 44px);
+  border-radius: 8px;
+}
+
+.hero-panel p {
+  max-width: 780px;
+  color: color-mix(in srgb, #271d1a 72%, #b14f3b 28%);
+  font-size: clamp(16px, 2vw, 19px);
+  line-height: 1.8;
+}
+
+.metric-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.metric-card {
+  border-radius: 8px;
+  padding: 18px;
+}
+
+.metric-value {
+  display: block;
+  margin-top: 10px;
+  font-size: clamp(24px, 3vw, 34px);
+  font-weight: 800;
+}
+
+.feature-strip {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(180px, 1fr));
+  gap: 14px;
+  margin: 26px 0;
+  overflow-x: auto;
+  padding-bottom: 6px;
+}
+
+.feature-panel {
+  min-width: 180px;
+  border-radius: 8px;
+  padding: 18px;
+}
+
+.feature-panel strong {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.feature-panel p {
+  color: color-mix(in srgb, #271d1a 68%, #b14f3b 32%);
+  line-height: 1.65;
+}
+
+.work-panel {
+  margin-top: 26px;
+  border-radius: 8px;
+  padding: 22px;
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border-radius: 999px;
+  padding: 6px 12px;
+  background: color-mix(in srgb, #b14f3b 14%, transparent);
+  color: #271d1a;
+  font-weight: 700;
+}
+
+@media (max-width: 860px) {
+  .topbar {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .lead-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .metric-grid {
+    grid-template-columns: 1fr;
+  }
+}
