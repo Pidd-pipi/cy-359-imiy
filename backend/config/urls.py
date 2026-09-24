@@ -1,9 +1,15 @@
 from django.urls import path
-from domain.views import health, overview
+
+from domain import views
 
 urlpatterns = [
-    path("health", health),
-    path("api/health", health),
-    path("overview", overview),
-    path("api/overview", overview),
+    path("health", views.health),
+    path("api/health", views.health),
+    path("overview", views.overview),
+    path("api/overview", views.overview),
+    # 赛后成绩结算
+    path("api/course", views.course_detail),
+    path("api/results/submit", views.results_submit),
+    path("api/results/overview", views.results_overview),
+    path("api/results/<int:result_id>/revoke", views.results_revoke),
 ]

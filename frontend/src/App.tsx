@@ -9,6 +9,7 @@ import type { OverviewResponse } from "./types";
 import { FeatureStrip } from "./components/FeatureStrip";
 import { MetricGrid } from "./components/MetricGrid";
 import { OperationsTable } from "./components/OperationsTable";
+import { ResultsWorkbench } from "./components/ResultsWorkbench";
 
 const { Header, Content } = Layout;
 
@@ -55,6 +56,7 @@ export default function App() {
             <MetricGrid items={overview.kpis} />
           </section>
           <FeatureStrip items={overview.features} />
+          <ResultsWorkbench />
           <section className="work-panel">
             <Typography.Title level={3}>运营任务流</Typography.Title>
             <OperationsTable records={overview.records} />

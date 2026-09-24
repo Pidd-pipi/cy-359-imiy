@@ -137,6 +137,53 @@ body {
   padding: 22px;
 }
 
+/* 赛后成绩结算 */
+.settlement-panel {
+  margin-top: 26px;
+}
+
+.settlement-header {
+  width: 100%;
+}
+
+.settlement-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(300px, 0.8fr);
+  gap: 18px;
+  margin-top: 8px;
+}
+
+.settlement-card {
+  border-radius: 8px;
+}
+
+.status-line {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+}
+
+.workbench-loading {
+  display: flex;
+  justify-content: center;
+  padding: 80px 0;
+}
+
+.stat-row {
+  width: 100%;
+}
+
+.stat-card {
+  min-width: 150px;
+  flex: 1;
+  border-radius: 8px;
+}
+
+.referee-overview .ant-alert {
+  margin-top: 4px;
+}
+
 .pill {
   display: inline-flex;
   align-items: center;
@@ -159,6 +206,10 @@ body {
   }
 
   .metric-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .settlement-grid {
     grid-template-columns: 1fr;
   }
 }
